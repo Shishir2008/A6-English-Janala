@@ -1,3 +1,11 @@
+
+function removeActiveClass (){
+    const activeButtons = document.getElementsByClassName('active');
+    for(let btn of activeButtons){
+        btn.classList.remove('active')
+    }
+}
+
 function lodeCateguri() {
     fetch('https://openapi.programming-hero.com/api/levels/all')
         .then((res) => res.json())
@@ -11,13 +19,14 @@ function lodevideos() {
 }
 const lodeCateguriVideo = (id)=>{
     const url = `https://openapi.programming-hero.com/api/level/${id}`
-    console.log(url)
+    // console.log(url)
     fetch(url)
     .then(res=>res.json())
     .then(data=>{
+        removeActiveClass()
         const clickButton = document.getElementById(`btn-${id}`);
         clickButton.classList.add('active')
-        console.log(clickButton)
+        // console.log(clickButton)
         displayVideos(data.data)
     })
 }
@@ -35,7 +44,7 @@ function displayCateguri(catiguri) {
 }
 
 const displayVideos = (videos) => {
-    console.log(videos)
+    // console.log(videos)
     const videoContenar = document.getElementById('video-content');
     videoContenar.innerHTML="";
     if(videos.length==0){
