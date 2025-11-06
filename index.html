@@ -17,8 +17,9 @@
         <nav>
             <div class="navbar bg-base-100 shadow-sm">
                 <div class="flex-1">
-                    <a class="flex items-center gap-2 text-xl"><span class="font-bold">English</span> <img class="object-cover" src="./assets/logo.png"
-                            alt=""> <span class="font-medium">জানালা</span></a>
+                    <a class="flex items-center gap-2 text-xl"><span class="font-bold">English</span> <img
+                            class="object-cover" src="./assets/logo.png" alt=""> <span
+                            class="font-medium">জানালা</span></a>
                 </div>
                 <div class="flex-none hidden md:block">
                     <ul class="menu menu-horizontal px-1 gap-2">
@@ -36,12 +37,13 @@
     </header>
     <main>
         <!-- banner section  -->
-        <section>
+        <section class="my-10">
             <div class="p-5 md:flex justify-center items-center">
                 <div>
                     <!-- banner discription -->
                     <h1 class="text-5xl font-bold my-5"><span class="text-sky-400">English</span> is Easy!!</h1>
-                    <p class="my-5 font-semibold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা  আপনার দক্ষতা<br> বাড়াতে  চান, আমাদের Interactive Lessons আপনাকে নিয়ে  যাবে অন্য একটি Level এ</p>
+                    <p class="my-5 font-semibold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+                        আপনার দক্ষতা<br> বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
                     <div class="flex flex-col gap-6 my-5">
                         <input type="text" placeholder="Enter Your Name " class="input" />
                         <input type="password" placeholder="password " class="input" />
@@ -50,7 +52,38 @@
                 </div>
                 <div>
                     <!-- banner img -->
-                     <img src="./assets/hero-student.png" alt="">
+                    <img src="./assets/hero-student.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Frequently Asked section -->
+        <section class="my-20">
+            <h1 class="text-4xl font-bold text-center"><span class="text-sky-400">Frequently</span> Asked Questions</h1>
+            <div class="p-5 space-y-3">
+                <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">1. Whta is the difference between var, let, and const?</div>
+                    <div class="collapse-content text-sm text-[#62748E]">Var is old verson let is new verson we can change value cosnt is also new verson and we cannot change value amre akon let and const bashe use kori.</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">2. Whta is the the difference between map(), forEach(), and filter()</div>
+                    <div class="collapse-content text-sm text-[#62748E]">.forEach() a function for each item Returns Nothing just want to loop through items .map() a function for each item a function for each item use this When i create a new array .filter() sobgular theka cheak a condition A new array with items that pass the test When i keep only some items</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">3.  What are arrow functions and how they are different from regular functions?</div>
+                    <div class="collapse-content text-sm text-[#62748E]">Arrow functions is short and modern way to write functions in JavaScript.</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">4. How do JavaScript Promises work?</div>
+                    <div class="collapse-content text-sm text-[#62748E]"> Promise in JavaScript is used for handling asynchronous work  that take time — like fetching data from a server.</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">5. how does closures work in JavaScript?</div>
+                    <div class="collapse-content text-sm text-[#62748E]">A closure happens when a function remembers the variables from its outer function, even after the outer function has finished running.</div>
                 </div>
             </div>
         </section>
