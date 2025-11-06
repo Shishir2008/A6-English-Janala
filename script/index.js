@@ -1,4 +1,17 @@
 
+const showLoader = ()=>{
+    document.getElementById('loader').classList.remove('hidden')
+    document.getElementById('video-content').classList.add('hidden')
+}
+const hideLoader = ()=>{
+    document.getElementById('loader').classList.add('hidden')
+    document.getElementById('video-content').classList.remove('hidden')
+}
+ function pronounceWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-EN'; // Japanese
+      window.speechSynthesis.speak(utterance);
+    }
 function removeActiveClass() {
     const activeButtons = document.getElementsByClassName('active');
     for (let btn of activeButtons) {
@@ -7,6 +20,7 @@ function removeActiveClass() {
 }
 
 function lodeCateguri() {
+    showLoader()
     fetch('https://openapi.programming-hero.com/api/levels/all')
         .then((res) => res.json())
         .then((data) => displayCateguri(data.data))
@@ -18,6 +32,7 @@ function lodevideos() {
     // .then(data => displayVideos(data.data))
 }
 const lodeCateguriVideo = (id) => {
+    showLoader()
     const url = `https://openapi.programming-hero.com/api/level/${id}`
     // console.log(url)
     fetch(url)
@@ -77,6 +92,7 @@ function displayCateguri(catiguri) {
     `;
         categuriContenar.append(categuriDiv)
     }
+    hideLoader()
 }
 
 const displayVideos = (videos) => {
@@ -91,6 +107,7 @@ const displayVideos = (videos) => {
                     <h2 class="text-[#292524] text-4xl font-medium">নেক্সট Lesson এ যান</h2>
                 </div>
         `;
+        hideLoader()
         return;
     }
     videos.forEach(video => {
@@ -104,11 +121,12 @@ const displayVideos = (videos) => {
                  <p class="text-xl font-semibold text-gray-700">"${video.meaning}/${video.pronunciation}"</p>
                  <div class="flex justify-between">
                      <button onclick=lodeVideoDetils(${video.id}) class="btn px-2 bg-[#1A91FF10]"> <i class="fa-solid fa-circle-info"></i></button>
-                     <button class="btn px-2 bg-[#1A91FF10]"><i class="fa-solid fa-volume-high"></i></button>
+                     <button onclick=pronounceWord('${video.word}') class="btn px-2 bg-[#1A91FF10]"><i class="fa-solid fa-volume-high"></i></button>
                  </div>
              </div>   
         `;
         videoContenar.append(videoCard)
+        hideLoader()
     });
 }
 
