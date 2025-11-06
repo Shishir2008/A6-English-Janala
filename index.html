@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
-            .active{
-                color: white;
-                background-color: #422AD5;
-            }
-        </style>
+    <style>
+        .active {
+            color: white;
+            background-color: #422AD5;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="navbar bg-base-100 shadow-sm">
+            <div class="navbar bg-base-300 shadow-sm">
                 <div class="flex-1">
                     <a class="flex items-center gap-2 text-xl"><span class="font-bold">English</span> <img
                             class="object-cover" src="./assets/logo.png" alt=""> <span
@@ -29,10 +29,10 @@
                 </div>
                 <div class="flex-none hidden md:block">
                     <ul class="menu menu-horizontal px-1 gap-2">
-                        <button class="btn btn-outline btn-primary font-bold"><i
-                                class="fa-solid fa-circle-question"></i> FAQ</button>
-                        <button class="btn btn-outline btn-primary font-bold"><i
-                                class="fa-solid fa-book-open"></i>Learn</button>
+                        <button class="btn btn-outline btn-primary font-bold"><a href="#Frequently"><i
+                                class="fa-solid fa-circle-question"></i> FAQ</a></button>
+                        <button class="btn btn-outline btn-primary font-bold"><a href="#learn"><i
+                                class="fa-solid fa-book-open"></i> Learn</a></button>
                         <button class="btn btn-outline btn-primary font-bold"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
 
@@ -63,7 +63,7 @@
             </div>
         </section>
         <!-- learn section -->
-        <section>
+        <section id="learn">
             <h1 class="text-4xl font-bold text-center my-10"><span class="text-sky-400">Let's</span> Learn Vocabularies
             </h1>
             <nav id="categuri-contenar" class="grid grid-cols-2 md:flex py-5 px-2 justify-center gap-5 "></nav>
@@ -87,7 +87,7 @@
             </div>
         </section>
         <!-- Frequently Asked section -->
-        <section class="my-20">
+        <section id="Frequently" class="my-20">
             <h1 class="text-4xl font-bold text-center my-10"><span class="text-sky-400">Frequently</span> Asked
                 Questions</h1>
             <div class="p-5 space-y-3">
@@ -149,6 +149,24 @@
             </div>
         </section>
     </footer>
+
+
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="video_detils" class="modal">
+        <div class="modal-box">
+           <div id="detils-contener">
+
+           </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-active btn-primary">Complete Learning</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
 
 
