@@ -20,20 +20,20 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="nav-bar" class="hidden">
             <div class="navbar bg-base-300 shadow-sm">
                 <div class="flex-1">
                     <a class="flex items-center gap-2 text-xl"><span class="font-bold">English</span> <img
                             class="object-cover" src="./assets/logo.png" alt=""> <span
                             class="font-medium">জানালা</span></a>
                 </div>
-                <div class="flex-none hidden md:block">
+                <div class="flex-none  ">
                     <ul class="menu menu-horizontal px-1 gap-2">
-                        <button class="btn btn-outline btn-primary font-bold"><a href="#Frequently"><i
+                        <button class="hidden md:block btn btn-outline btn-primary font-bold"><a href="#Frequently"><i
                                 class="fa-solid fa-circle-question"></i> FAQ</a></button>
-                        <button class="btn btn-outline btn-primary font-bold"><a href="#learn"><i
+                        <button class=" hidden md:block btn btn-outline btn-primary font-bold"><a href="#learn"><i
                                 class="fa-solid fa-book-open"></i> Learn</a></button>
-                        <button class="btn btn-outline btn-primary font-bold"><i
+                        <button id="logut" class="btn btn-outline btn-primary font-bold"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
 
                     </ul>
@@ -43,18 +43,18 @@
     </header>
     <main>
         <!-- banner section  -->
-        <section class="my-10">
-            <div class="p-5 md:flex justify-center items-center">
+        <section id="banner-id" class="my-10">
+            <div class="p-5 flex flex-col-reverse sm:flex-row justify-center items-center">
                 <div>
                     <!-- banner discription -->
-                    <h1 class="text-5xl font-bold my-5"><span class="text-sky-400">English</span> is Easy!!</h1>
+                     <h1 class="text-5xl font-bold my-5"><span class="text-sky-400">English</span> is Easy!!</h1>
                     <p class="my-5 font-semibold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
                         আপনার দক্ষতা<br> বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
                     <div class="flex flex-col gap-6 my-5">
-                        <input type="text" placeholder="Enter Your Name " class="input" />
-                        <input type="password" placeholder="password " class="input" />
+                        <input id="text" type="text" placeholder="Enter Your Name " class="input" required/>
+                        <input id="pass" type="text" placeholder="Enter Login code 123456 " class="input" required/>
                     </div>
-                    <button class="btn btn-primary">Get Started</button>
+                    <button id="login-btn" class="btn btn-primary">Get Started</button>
                 </div>
                 <div>
                     <!-- banner img -->
@@ -63,7 +63,7 @@
             </div>
         </section>
         <!-- learn section -->
-        <section id="learn">
+        <section id="learn" class="hidden">
             <h1 class="text-4xl font-bold text-center my-10"><span class="text-sky-400">Let's</span> Learn Vocabularies
             </h1>
             <nav id="categuri-contenar" class="grid grid-cols-2 md:flex py-5 px-2 justify-center gap-5 "></nav>
@@ -94,7 +94,7 @@
             </div>
         </section>
         <!-- Frequently Asked section -->
-        <section id="Frequently" class="my-20">
+        <section id="Frequently" class="my-20 hidden">
             <h1 class="text-4xl font-bold text-center my-10"><span class="text-sky-400">Frequently</span> Asked
                 Questions</h1>
             <div class="p-5 space-y-3">

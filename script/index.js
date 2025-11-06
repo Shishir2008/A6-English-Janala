@@ -1,17 +1,46 @@
 
-const showLoader = ()=>{
+
+document.getElementById('logut').addEventListener('click', () => {
+    document.getElementById('nav-bar').classList.add('hidden')
+    document.getElementById('learn').classList.add('hidden')
+    document.getElementById('Frequently').classList.add('hidden')
+    document.getElementById('banner-id').classList.remove('hidden')
+})
+
+document.getElementById('login-btn').addEventListener('click', () => {
+    const text= document.getElementById('text').value;
+    const pin = document.getElementById('pass').value;
+    // console.log(pin)
+    if(text){
+        const convertedPin = parseInt(pin)
+    if (convertedPin === 123456) {
+        document.getElementById('nav-bar').classList.remove('hidden')
+        document.getElementById('learn').classList.remove('hidden')
+        document.getElementById('Frequently').classList.remove('hidden')
+        document.getElementById('banner-id').classList.add('hidden')
+
+    }
+    else {
+        alert('Wrong Password.contact admin to get Your Login code')
+    }
+    }
+    else{
+        alert('Plese Tell use your Name fist')
+    }
+})
+const showLoader = () => {
     document.getElementById('loader').classList.remove('hidden')
     document.getElementById('video-content').classList.add('hidden')
 }
-const hideLoader = ()=>{
+const hideLoader = () => {
     document.getElementById('loader').classList.add('hidden')
     document.getElementById('video-content').classList.remove('hidden')
 }
- function pronounceWord(word) {
-      const utterance = new SpeechSynthesisUtterance(word);
-      utterance.lang = 'en-EN'; // Japanese
-      window.speechSynthesis.speak(utterance);
-    }
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN'; // Japanese
+    window.speechSynthesis.speak(utterance);
+}
 function removeActiveClass() {
     const activeButtons = document.getElementsByClassName('active');
     for (let btn of activeButtons) {
