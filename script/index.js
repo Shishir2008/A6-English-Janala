@@ -91,7 +91,7 @@ const displayModalDetils = (video) => {
                 <h2 class="text-2xl font-semibold">${video.word}(<i class="fa-solid fa-microphone-lines"></i>:${video.pronunciation} )</h2>
                 <div class="flex flex-col space-y-2">
                 <p class=" text-xl font-medium">meaning</p>
-                 <p class=" font-semibold text-gray-700">${video.meaning}</p>
+                 <p class=" font-semibold text-gray-700">${video.meaning===null?'অর্থ পাওয়া যায়নি':video.meaning}</p>
                 </div>
                 <div class="flex flex-col space-y-2">
                 <p class=" text-xl font-medium">Example</p>
@@ -99,10 +99,10 @@ const displayModalDetils = (video) => {
                 </div>
                 <div class="flex flex-col space-y-2">
                 <p class=" text-xl font-medium">সমার্থক শব্দ গুলো</p>
-                <div>
-                <button class="btn ">${video.synonyms[0]}</button>
-                <button class="btn ">${video.synonyms[1]}</button>
-                <button class="btn ">${video.synonyms[2]}</button>
+                <div class=" space-x-4">
+                <button class="btn ">${video.synonyms[0]===undefined?'':video.synonyms[0]}</button>
+                <button class="btn ">${video.synonyms[1]===undefined?'':video.synonyms[1]}</button>
+                <button class="btn ">${video.synonyms[2]===undefined?'':video.synonyms[2]}</button>
                 
                 </div>
                 </div>
@@ -147,7 +147,7 @@ const displayVideos = (videos) => {
              <div  class="bg-white text-center  space-y-8 p-3 rounded-lg shadow-xl hover:bg-sky-50 border border-x-20 border-y-20 border-white">
                  <h2 class="text-2xl font-bold">${video.word}</h2>
                  <p class="font-medium text-sm">meaning/pronunciation</p>
-                 <p class="text-xl font-semibold text-gray-700">"${video.meaning}/${video.pronunciation}"</p>
+                 <p class="text-xl font-semibold text-gray-700">"${video.meaning===null?'অর্থ নেই':video.meaning}/${video.pronunciation}"</p>
                  <div class="flex justify-between">
                      <button onclick=lodeVideoDetils(${video.id}) class="btn px-2 bg-[#1A91FF10]"> <i class="fa-solid fa-circle-info"></i></button>
                      <button onclick=pronounceWord('${video.word}') class="btn px-2 bg-[#1A91FF10]"><i class="fa-solid fa-volume-high"></i></button>
