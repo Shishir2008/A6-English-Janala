@@ -100,9 +100,9 @@ const displayModalDetils = (video) => {
                 <div class="flex flex-col space-y-2">
                 <p class=" text-xl font-medium">সমার্থক শব্দ গুলো</p>
                 <div class=" space-x-4">
-                <button class="btn ">${video.synonyms[0]===undefined?'':video.synonyms[0]}</button>
-                <button class="btn ">${video.synonyms[1]===undefined?'':video.synonyms[1]}</button>
-                <button class="btn ">${video.synonyms[2]===undefined?'':video.synonyms[2]}</button>
+                <button class="btn bg-[#D7E4EF]">${video.synonyms[0]===undefined?'':video.synonyms[0]}</button>
+                <button class="btn bg-[#D7E4EF]">${video.synonyms[1]===undefined?'':video.synonyms[1]}</button>
+                <button class="btn bg-[#D7E4EF]">${video.synonyms[2]===undefined?'':video.synonyms[2]}</button>
                 
                 </div>
                 </div>
